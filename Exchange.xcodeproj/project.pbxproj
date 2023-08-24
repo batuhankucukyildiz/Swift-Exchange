@@ -12,6 +12,7 @@
 		458551F32A977036001F40CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458551F22A977036001F40CF /* Assets.xcassets */; };
 		458551F62A977036001F40CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458551F52A977036001F40CF /* Preview Assets.xcassets */; };
 		458551FE2A977067001F40CF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458551FD2A977066001F40CF /* Endpoint.swift */; };
+		458552022A977550001F40CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458552012A977550001F40CF /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		458551F22A977036001F40CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458551F52A977036001F40CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		458551FD2A977066001F40CF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		458552012A977550001F40CF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				458551FD2A977066001F40CF /* Endpoint.swift */,
+				458552012A977550001F40CF /* NetworkManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458552022A977550001F40CF /* NetworkManager.swift in Sources */,
 				458551F12A977034001F40CF /* ContentView.swift in Sources */,
 				458551FE2A977067001F40CF /* Endpoint.swift in Sources */,
 				458551EF2A977034001F40CF /* ExchangeApp.swift in Sources */,
