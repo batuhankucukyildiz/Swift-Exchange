@@ -42,4 +42,9 @@ class NetworkManager {
         }
         urlSessionTask.resume()
     }
+    
+    func getAllExchangeData(completion : @escaping(Result<ExchangeModel , Error>) ->Void) -> Void {
+        let endpoint = EndPoint.getExchangeDetails
+        request(endpoint, completion: completion)
+    }
 }

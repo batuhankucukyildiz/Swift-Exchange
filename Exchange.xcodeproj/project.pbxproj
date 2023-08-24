@@ -14,6 +14,7 @@
 		458551FE2A977067001F40CF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458551FD2A977066001F40CF /* Endpoint.swift */; };
 		458552022A977550001F40CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458552012A977550001F40CF /* NetworkManager.swift */; };
 		458552052A977A94001F40CF /* ExchangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458552042A977A93001F40CF /* ExchangeModel.swift */; };
+		458552082A97886F001F40CF /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458552072A97886F001F40CF /* HomeScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		458551FD2A977066001F40CF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		458552012A977550001F40CF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		458552042A977A93001F40CF /* ExchangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeModel.swift; sourceTree = "<group>"; };
+		458552072A97886F001F40CF /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +59,11 @@
 		458551ED2A977034001F40CF /* Exchange */ = {
 			isa = PBXGroup;
 			children = (
+				458552092A978C7F001F40CF /* Views */,
+				458552062A978832001F40CF /* ViewModel */,
 				458552032A977A7E001F40CF /* Model */,
 				458551FC2A977047001F40CF /* Service */,
 				458551EE2A977034001F40CF /* ExchangeApp.swift */,
-				458551F02A977034001F40CF /* ContentView.swift */,
 				458551F22A977036001F40CF /* Assets.xcassets */,
 				458551F42A977036001F40CF /* Preview Content */,
 			);
@@ -90,6 +93,22 @@
 				458552042A977A93001F40CF /* ExchangeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		458552062A978832001F40CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				458552072A97886F001F40CF /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458552092A978C7F001F40CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				458551F02A977034001F40CF /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				458552052A977A94001F40CF /* ExchangeModel.swift in Sources */,
+				458552082A97886F001F40CF /* HomeScreenViewModel.swift in Sources */,
 				458552022A977550001F40CF /* NetworkManager.swift in Sources */,
 				458551F12A977034001F40CF /* ContentView.swift in Sources */,
 				458551FE2A977067001F40CF /* Endpoint.swift in Sources */,
