@@ -7,27 +7,36 @@
 
 import Foundation
 
-class NetworkManager{
+class NetworkManager {
     
     static let shared = NetworkManager()
     private init() {}
     
-    func request <T : Decodable > (_ endpoint : EndPoint , completion : @escaping (Result<T , Error> ) -> Void ) -> Void{
-        let urlSessionTask = URLSession.shared.dataTask(with: endpoint.request()) {(data , response , error) in
-            if let error = error{
-                print(error)
+    func request<T: Decodable>(_ endpoint: EndPoint, completion: @escaping (Result<T, Error>) -> Void) {
+        let urlSessionTask = URLSession.shared.dataTask(with: endpoint.request()) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
             }
-            if let response = response as? HTTPURLResponse {
-                if (response.statusCode >= 200 && response.statusCode <= 500) {print(response.statusCode)}
-                else{return}
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                let unknownError = NSError(domain: "UnknownError", code: 0, userInfo: nil)
+                completion(.failure(unknownError))
+                return
             }
+            
+            if !(200...299).contains(httpResponse.statusCode) {
+                let statusCodeError = NSError(domain: "HTTPError", code: httpResponse.statusCode, userInfo: nil)
+                completion(.failure(statusCodeError))
+                return
+            }
+            
             if let data = data {
                 do {
-                    let decodeJsonData = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decodeJsonData))
-                }
-                catch let error{
-                    completion(.failure(error))
+                    let decodedJsonData = try JSONDecoder().decode(T.self, from: data)
+                    completion(.success(decodedJsonData))
+                } catch let decodingError {
+                    completion(.failure(decodingError))
                 }
             }
         }
